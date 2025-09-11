@@ -15,7 +15,8 @@
     }
 #imagenContenedorFormulario {
         background-image: url(bannerPubli.png);
-        width: 95%;
+      background-size: cover;
+      background-position: center;
     }
     #logo
     {
@@ -23,9 +24,7 @@
         height: 45px;
         padding-left: 7pxpx;
     }
-    #tagsFormularioDesktop{
-        padding-left: 25px ;
-    }
+    
     #contenedorForm{
         background-color: rgba(0, 0, 0, 0.8);
   color: white;
@@ -55,6 +54,9 @@
   padding: 20px;
   border: 2px;
   display: block;
+    }
+    #formPresupuesto> .miconteiner{
+      padding-left: 0;
     }
    </style>
   <!-- Navbar -->
@@ -86,7 +88,7 @@
 
   <!-- Formulario -->
  <section id="seccionFormulario" class="bg-white border-t">
-  <div class="flex flex-col md:flex-row mt-12 px-4 relative z-10 pl-0">
+  <div class="w-full flex justify-center pt-20 px-4">
     
     <!-- Contenido lado izquierdo (solo visible en desktop) -->
     <div id="imagenContenedorFormulario" class="hidden md:block md:w-1/2 pr-8">
@@ -95,8 +97,8 @@
     </div>
 
     <!-- Formulario (visible siempre, pero centrado en mobile) -->
-<div id="contenedorForm" class="w-full md:w-1/2 flex justify-center">
-  <div id="tagsFormularioDesktop" class="bg-black shadow-lg rounded-2xl p-2 pr-8 w-full max-w-lg">
+<div id="contenedorForm" class="w-full md:w-1/2 flex">
+  <div id="tagsFormularioDesktop" class="bg-black shadow-lg rounded-2xl p-6 pr-8 w-full max-w-lg">
     <h2 class="text-3xl font-bold mb-4 text-center text-white">Pedi tu presupuesto</h2>
     <p class="text-gray-300 mb-6 text-center">Completá el formulario y nos pondremos en contacto para 
       darte un presupuesto estimado.</p>
@@ -106,19 +108,19 @@
         <label class="block text-left font-semibold text-white">Nombre</label>
         <input type="text" id="nombre" required
           class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500
-          text-white placeholder-gray-400 bg-gray-800">
+          text-black">
       </div>
-      <div>
+      <div class="miconteiner">
         <label class="block text-left font-semibold text-white">Email</label>
         <input type="email" id="email" required
           class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500
-          text-white placeholder-gray-400 bg-gray-800">
+          text-black">
       </div>
       <div>
         <label class="block text-left font-semibold text-white">Detalles</label>
         <textarea id="mensaje" rows="4"
           class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 
-          text-white placeholder-gray-400 bg-gray-800"></textarea>
+          text-black"></textarea>
       </div>
       <button type="submit"
         class="w-full bg-green-500 text-white py-3 rounded-lg font-bold hover:bg-green-600 transition">
